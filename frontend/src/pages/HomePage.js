@@ -35,7 +35,7 @@ function HomePage() {
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans" color="black">
-          Talk-A-Tive
+          GSP Chat App
         </Text>
       </Box>
       <Box bg="gray.100" w="100%" p={4} borderRadius="lg" borderWidth="1px">

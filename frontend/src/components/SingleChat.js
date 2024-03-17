@@ -22,7 +22,7 @@ import Lottie from "react-lottie";
 import animationData from "../animations/type.json";
 
 const ENDPOINT =
-  process.env.ENDPOINT || "https://gsp-mern-chat-app.onrender.com/";
+  process.env.ENDPOINT || "https://gsp-mern-chat-app.onrender.com";
 var socket, selectedChatCompare;
 
 function SingleChat({ fetchAgain, setFetchAgain }) {
