@@ -11,9 +11,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
-  const instance = axios.create({
-    baseURL: "http://localhost:5000",
-  });
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -101,7 +98,7 @@ function Signup() {
         password,
         pic: pics,
       };
-      instance
+      axios
         .post("/api/user", data, config)
         .then((res) => {
           setLoading(false);
