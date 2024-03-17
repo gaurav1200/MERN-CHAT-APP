@@ -84,7 +84,7 @@ function Login() {
       >
         Login
       </Button>
-      <Button
+      {/* <Button
         colorScheme="red"
         variant="solid"
         width="100%"
@@ -95,7 +95,7 @@ function Login() {
         isLoading={loading}
       >
         Get guest user credentials
-      </Button>
+      </Button> */}
     </VStack>
   );
 }
