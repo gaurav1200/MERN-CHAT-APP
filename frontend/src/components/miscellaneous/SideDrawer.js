@@ -219,9 +219,9 @@ const SideDrawer = () => {
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
               />
-              <Button onClick={handleSearch} isLoading={loadingChat}>
+              {/* <Button onClick={handleSearch} isLoading={loadingChat}>
                 Go
-              </Button>
+              </Button> */}
             </Box>
             {loading ? (
               <ChatLoading />

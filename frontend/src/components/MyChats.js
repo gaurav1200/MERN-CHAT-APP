@@ -15,7 +15,9 @@ const MyChats = ({ fetchAgain }) => {
   const fetchChats = async () => {
     const config = {
       headers: {
-        Authorization: `Bearer ${user.token}`,
+        Authorization: `Bearer ${
+          JSON.parse(sessionStorage.getItem("userInfo")).token
+        }`,
       },
     };
 
