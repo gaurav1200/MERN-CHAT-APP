@@ -10,14 +10,12 @@ import GroupChatModal from "./miscellaneous/GroupChatModal";
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
 
-  const { selectedChat, setSelectedChat, chats, setChats } = ChatState();
+  const { selectedChat, setSelectedChat, chats, setChats, user } = ChatState();
   const toast = useToast();
   const fetchChats = async () => {
     const config = {
       headers: {
-        Authorization: `Bearer ${
-          JSON.parse(sessionStorage.getItem("userInfo"))?.token
-        }`,
+        Authorization: `Bearer ${user.token}`,
       },
     };
 
