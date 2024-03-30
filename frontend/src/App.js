@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import ChatPage from "./pages/ChatPage";
 import axios from "axios";
+import { useEffect } from "react";
 
 const visitEndpoint = "https://gsp-server.onrender.com";
 function App() {
