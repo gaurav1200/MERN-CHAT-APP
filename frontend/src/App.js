@@ -8,18 +8,23 @@ import { useEffect } from "react";
 const visitEndpoint = "https://gsp-server.onrender.com";
 function App() {
   useEffect(() => {
-    const data = {
-      webSiteName: "chat-app",
-      count: 1,
-    };
-    axios
-      .post(`${visitEndpoint}/visit`, { data })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (sessionStorage.getItem("visit")) {
+      console.log("visited");
+    } else {
+      const data = {
+        webSiteName: "chat-app",
+        count: 1,
+      };
+      axios
+        .post(`${visitEndpoint}/visit`, { data })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+    sessionStorage.setItem("visit", true);
   }, []);
   return (
     <div className="App">
